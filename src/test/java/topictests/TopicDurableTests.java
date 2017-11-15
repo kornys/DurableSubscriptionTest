@@ -95,7 +95,8 @@ public class TopicDurableTests {
 
     @Test
     public void testSharedNonDurableSubscription() throws JMSException, NamingException, InterruptedException, ExecutionException, TimeoutException {
-        for (int i = 0; i < 3; i++) {
+        int iterations = 1;
+        for (int i = 0; i < iterations; i++) {
             System.out.println("testSharedNonDurableSubscription; iteration: " + i);
             //SETUP-START
             Hashtable env = new Hashtable<Object, Object>();
@@ -145,6 +146,7 @@ public class TopicDurableTests {
             System.out.println("messages received");
             //BODY-E
 
+            Thread.sleep(20000);
             //TEAR-DOWN-S
             connection1.stop();
             connection2.stop();
