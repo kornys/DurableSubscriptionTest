@@ -1,6 +1,6 @@
 # DurableSubscriptionTest
 
-===Run test
+### Run test
 ```sh
 $ mvn -Dtest=topictests.TopicDurableTests test
 ```
